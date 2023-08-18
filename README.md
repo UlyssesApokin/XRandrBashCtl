@@ -5,7 +5,7 @@ XRandrBashCtl is a simple script to adjust the brightness of the external displa
 # Download && Setup
 
 ````
-$ git clone git@github.com:UlyssesApokin/XRandrBashCtl.git
+$ git clone https://github.com/UlyssesApokin/XRandrBashCtl.git
 ````
 
 ````
