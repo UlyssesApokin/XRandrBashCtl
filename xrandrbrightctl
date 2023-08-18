@@ -1,0 +1,29 @@
+#!/bin/bash
+
+FILE=.savedravs
+
+if [ -f "$FILE" ]; then
+	b=$(ex -s +1p +q $FILE)
+else
+	b=10
+fi
+
+if [ $1 == 'inc' ]; then
+	(( b += 1 ))
+elif [ $1 == 'dec' ]; then
+	(( b -= 1 ))
+fi
+
+if [ "$b" -lt "1" ]; then
+	b=0
+fi
+
+c='0.'$b
+
+if [ "$b" -gt "9" ]; then
+	c='1.0'
+	b=10
+fi
+
+echo $b > $FILE
+xrandr --output HDMI-0 --brightness $c
